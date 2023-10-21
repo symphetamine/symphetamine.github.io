@@ -1,0 +1,40 @@
+#first-paragraph {
+    color: orangered;
+    background-color: navy;
+    font-style: italic;
+}
+
+#second-paragraph {
+    color: green;
+    background-color: #ffc0cb;
+    text-decoration: underline;
+}
+
+#bold-paragraph {
+    font-weight:bold;
+    background-color: lavender;
+}
+
+#span1 {
+    color: crimson;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#span2 {
+    font-style: italic;
+    text-decoration: line-throughh;
+}
+
+#span3 {
+    color:blue;
+    background-color: yellow;
+}
+
+#span4 {
+    text-align: right;
+}
+
+body {
+    background-color: palevioletred;
+}
