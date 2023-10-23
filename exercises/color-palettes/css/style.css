@@ -1,0 +1,86 @@
+#palette-1 {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#p1-c1 {
+    background-color: #00FFFC;
+    padding: 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: left;
+}
+
+#p1-c2 {
+    background-color: #48FFE0;
+    padding: 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: left;
+}
+
+#p1-c3 {
+    background-color: #50B5FC;
+    padding: 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: left;
+}
+
+#palette-2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#p2-c1 {
+    background-color: #BC2F37;
+    padding: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: right;
+}
+
+#p2-c2 {
+    background-color: #BFA5A3;
+    padding: 24px;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    text-align: right;
+}
+
+#p2-c3 {
+    background-color: #80A429;
+    padding: 24px;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    text-align: right;
+}
+
+#palette-3 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#p3-c1 {
+    background-color: #1E6C7B;
+    padding: 24px;
+    font-family:'Times New Roman', Times, serif;
+    color: navy;
+    text-align: center;
+}
+
+#p3-c2 {
+    background-color: #4AB58A;
+    padding: 24px;
+    font-family:'Times New Roman', Times, serif;
+    color: navy;
+    text-align: center;
+}
+
+#p3-c3 {
+    background-color: #F0EE6E;
+    padding: 24px;
+    font-family:'Times New Roman', Times, serif;
+    color: navy;
+    text-align: center;
+}
