@@ -1,0 +1,63 @@
+/*
+    NOTE TO STUDENTS: 
+
+    This is the file you should be writing your CSS in 
+    for the Bulletin Board assignment.
+
+    Good luck, and have fun!
+*/
+.post-it {
+    background-color: pink;
+    display: inline-block;
+    text-align: center;
+    margin: 24px;
+    padding: 24px;
+    width: 35%;
+    height: 200px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+.post-it2 {
+    background-color: lightblue;
+    display: inline-block;
+    margin: 24px;
+    padding: 24px;
+    width: 25%;
+    height: 150;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-it3 {
+    background-color: coral;
+    display: inline-block;
+    margin: 24px;
+    padding: 24px;
+    width: 25%;
+    height: 150;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.post-it4 {
+    background-color: black;
+    display: inline-block;
+    margin: 24px;
+    padding: 24px;
+    height: 100;
+}
+.post-it5 {
+    background-color: white;
+    display: inline-block;
+    margin: 24px;
+    padding: 24px;
+    height: 100;
+    width: 25%;
+}
+.post-it6 {
+    background-color: lightseagreen;
+    display: inline-block;
+    margin: 24px;
+    padding: 24px;
+    height: 100;
+    width: 25%;
+}
