@@ -1,0 +1,30 @@
+div {
+    border: 5px solid black;
+    border-bottom-color: pink;
+    border-top-color: pink;
+    margin: 24px;
+    /* 1 value for margin will apply that size along all 4 sides */
+    margin: 40px 100px;
+    /* 2 values for shorthand margin will apply the first value to the top and 
+    bottom of an element, and apply the second value to the left and right side
+    of an element */
+    margin: 10px 50px 25px;
+    /* 3 values for shorthand margin will apply the first value to the top of 
+    an element, the second value to the left and right of an element, and the
+    third value to the bottom of an element*/
+    margin: 25px 125px 50px 20px;
+    /*4 values for shorthand margin will apply the first value to the top of 
+    an element, the second value right of an element, the
+    third value to the bottom of an element, and fourth value applies to the left
+    of an element. */
+    padding: 24px 36px;
+    background-color: burlywood; 
+}
+
+p {
+    border: 20px dotted blue;
+    margin: 60px;
+    padding: 48px 60px;
+    background-color: cornflowerblue;
+    border-radius: 50px;
+}
