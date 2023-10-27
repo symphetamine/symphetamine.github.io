@@ -4,17 +4,25 @@ div.orange {
 }
 
 /* Drill 2 - Write your code solution below */
-
+div.purple {
+    color: orangered
+}
 
 
 /* Drill 3 - Write your code solution below */
-
+.dashed p span {
+    color: magenta
+}
 
 
 /* Drill 4 - Write your code solution below */
-
+div.shadowed p {
+    background-color: skyblue;
+}
 
 
 /* Drill 5 - Write your code solution below */
-
+div.dog-days img {
+    border-radius: 1000px;
+}
 
