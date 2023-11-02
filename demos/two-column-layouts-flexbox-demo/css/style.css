@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#two-columns {
+    display: flex;
+}
+
+#sidebar-content {
+    background-color: lightblue;
+    width: 250px;
+    padding: 24px;
+    border-right: 3px solid rgb(31, 56, 65);
+}
+#sidebar-content h2 {
+    border-bottom: 2px solid rgb(31, 56, 65);
+    padding-bottom: 8px;
+}
+#sidebar-content ul {
+    list-style: none;
+    padding: 0px;
+}
+#sidebar-content ul a {
+    color: #111111;
+    text-decoration: none;
+}
+#sidebar-content ul li {
+    padding: 4px 0px;
+}
+
+#main-content {
+    flex: 1;
+    padding: 48px;
+}
