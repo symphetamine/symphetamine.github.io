@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+#two-columns {
+    display: flex;
+}
+#sidebar-content {
+    width: 250px;
+    padding: 24px;
+}
+#sidebar-content h2 {
+    padding-bottom: 8px;
+}
+#sidebar-content ul {
+    list-style: none;
+    padding: 0px;
+}
+#sidebar-content ul a {
+    text-decoration: none;
+}
+#sidebar-content ul li {
+    padding: 4px 0px;
+}
+
+#side-picture {
+    order: 3;
+}
+
+#main-content {
+    order: 2;
+}
