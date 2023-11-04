@@ -13,6 +13,21 @@ body {
     color:#6b7394;
 }
 
+#sidebar-content h2 {
+    background-color: lightseagreen;
+    margin: 0px;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+}
+#sidebar-content ul {
+    background-color: black;
+    border: 1px solid lightseagreen;
+    margin: 0px 0px 36px;
+    list-style-type: none;
+    padding: 0px 12px;
+}
+
 #sidebar-content {
     grid-area: sidebar;
 }
@@ -27,7 +42,7 @@ body {
 
 #grid-layout {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 400px 250px 1fr;
     grid-template-areas:
         ". content sidebar ."
     ;
