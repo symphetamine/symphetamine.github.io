@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+#sidebar-content h2 {
+    color: #6b7394;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sidebar-content a {
+    text-decoration: none;
+    color:#6b7394;
+}
+
+#sidebar-content {
+    grid-area: sidebar;
+}
+
+#main-content {
+    grid-area: content;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        ". content sidebar ."
+    ;
+}
+
+.parent {
+    position: relative;
+    background-image: url(../images/tan.jpg);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image2 {
+    position: absolute;
+    top: 225px;
+    border: 1px solid #000000;
+  }
+
+  #main-content {
+    background-color: rgb(113, 212, 245);
+  }
+
+  #post {
+    background-color: white;
+  }
