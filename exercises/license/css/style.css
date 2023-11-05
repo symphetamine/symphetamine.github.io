@@ -8,6 +8,11 @@
 */
 
 #license {
+    background: linear-gradient(
+        to bottom right,
+        rgb(253, 204, 115)
+        rgb(237, 140, 79)
+    );
     border: 2px solid black;
     width: 700px;
 }
