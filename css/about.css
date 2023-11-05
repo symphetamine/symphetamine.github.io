@@ -46,4 +46,5 @@ img {
 
 #abt {
     display: grid;
+    grid-template-columns: 1fr 450px 250px 1fr;
 }
