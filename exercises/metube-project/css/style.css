@@ -131,3 +131,8 @@ body {
     border-radius: 8px;
     width: 30%;
 }
+
+.metube-item a:hover {
+    background-color: seagreen;
+    border-radius: 12px;
+}
