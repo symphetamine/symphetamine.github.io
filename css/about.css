@@ -21,10 +21,13 @@ img {
 .frame {
     width: 350px;
     border: 10px solid rgb(235, 148, 235);
+    display: inline-block;
+    vertical-align: top;
 }
 .frame img {
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 .title h1 {
     border-bottom: 2px solid rg;
@@ -45,6 +48,10 @@ img {
 }
 
 #abt {
-    display: grid;
     grid-template-columns: 1fr 450px 250px 1fr;
+}
+
+.title {
+    display: inline-block;
+    width: 400px;
 }
