@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    background-color: #111;
 }
 body {
     margin: 0px;
     font-family: sans-serif;
+    background-color: #111;
 }
 
 #grid-layout {
@@ -97,42 +97,19 @@ body {
     margin-bottom: 4px;
 }
 
-.metube-item .thumbnail-placeholder1 {
+.metube-item .thumbnail-placeholder {
     aspect-ratio: 16 / 9;
     border-radius: 8px;
-    width: 30%;
 }
 
-.metube-item .thumbnail-placeholder2 {
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    width: 30%;
-}
-
-.metube-item .thumbnail-placeholder3 {
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    width: 30%;
-}
-
-.metube-item .thumbnail-placeholder4 {
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    width: 30%;
-}
-.metube-item .thumbnail-placeholder5 {
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    width: 30%;
-}
-
-.metube-item .thumbnail-placeholder6 {
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    width: 30%;
-}
-
-.metube-item a:hover {
+.metube-item a:hover, 
+.metube-item:hover {
     background-color: seagreen;
     border-radius: 12px;
+}
+
+.metube-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
