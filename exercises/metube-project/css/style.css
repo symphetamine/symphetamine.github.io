@@ -74,7 +74,6 @@ body {
 
 .metube-item .thumbnail-placeholder {
     aspect-ratio: 16 / 9;
-    background: radial-gradient(at top left, crimson, orange);
     border-radius: 8px;
 }
 
@@ -96,4 +95,39 @@ body {
 
 .metube-item .video-channel {
     margin-bottom: 4px;
+}
+
+.metube-item .thumbnail-placeholder1 {
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.metube-item .thumbnail-placeholder2 {
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.metube-item .thumbnail-placeholder3 {
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.metube-item .thumbnail-placeholder4 {
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    width: 30%;
+}
+.metube-item .thumbnail-placeholder5 {
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.metube-item .thumbnail-placeholder6 {
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    width: 30%;
 }
