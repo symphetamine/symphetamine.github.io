@@ -40,6 +40,7 @@ body {
     background-color: white;
     object-fit: cover;
     aspect-ratio: 16 / 9;
+    box-shadow: 4px 4px 12px #353434;
 }
 
 .card-style-1:hover {
