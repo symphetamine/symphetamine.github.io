@@ -16,6 +16,15 @@ body {
     font-family: sans-serif;
 }
 
+#main {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card-style-2 a {
     display: block;
     color: white;
@@ -27,12 +36,12 @@ body {
 }
 .card-style-2 {
     width: 350px;
-    margin: 50px;
+    margin: 40px;
     background-color: white;
-    object-fit: cover;
-    padding: 30px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 30px;
     justify-content: space-between;
+    object-fit: cover;
 }
 
 .card-style-2:hover {
@@ -54,11 +63,13 @@ body {
 .card-style-2 h2 {
     margin-top: 12px;
     text-align: center;
+    margin: 20px;
 }
 .card-style-2 p {
     font-size: 15px;
-    text-align: left;
+    text-align: center;
     padding: 12px 20px 3px 20px;
+    margin-bottom: 50px;
 }
 
 h2 {
@@ -70,4 +81,12 @@ h2 {
     justify-content: space-between;
     font-size: 20px;
     margin: 24px;
+    margin-bottom: 40px;
+}
+
+.animagram-header,
+.animagram-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
 }
