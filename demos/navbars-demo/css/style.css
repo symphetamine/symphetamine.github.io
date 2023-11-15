@@ -304,17 +304,6 @@ body {
     header, that contains both of our navbars.
 */
 
-#navbar-bottom {
-    background: linear-gradient(to bottom, yellowgreen, olive);
-    display: flex;
-    justify-content: space-between;
-}
-
-#navbar-bottom a {
-    text-decoration: none;
-    color: white;
-    padding: 12px 36px;
-}
 /*
     What if we want to add a footer? Well,
     footer navbars are really not much different

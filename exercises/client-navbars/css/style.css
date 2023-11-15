@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+#navbar {
+    background: linear-gradient(to bottom, rgb(165, 81, 42), #3e6d3e);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 24px;
+}
+#navbar h3 {
+    color: rgb(255, 160, 18);
+    font-family: cursive;
+}
+
+#navbar2 {
+    background: linear-gradient(to bottom, orange, orangered);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+#navbar2 a {
+    text-decoration: none;
+    color: rgb(46, 69, 99);
+    padding: 24px;
+}
+#navbar2 h3 {
+    color: rgb(46, 69, 99);
+    font-family: cursive;
+}
+
+#navbar2 .cta-button {
+    background-color: rgb(228, 228, 4);
+    color: rgb(46, 69, 99);
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+#navbar3 {
+    background: linear-gradient(to bottom, rgb(255, 103, 33), #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar3 h1 {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    padding: 24px;
+}
+#navbar3 h3 {
+    color: rgb(255, 160, 18);
+    font-family: cursive;
+}
+
+#navbar3 i {
+    padding-right: 8px;
+    font-size: 24px;
+}
+
+#navbar-bottom {
+    background: linear-gradient(to bottom, rgb(253, 249, 24), rgb(128, 83, 0));
+    display: flex;
+    justify-content: center;
+}
+
+#navbar-bottom a {
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    padding: 24px 36px;
+    font-weight: bold;
+}
+
+#navbar-bottom h4 {
+    font-size: 18px;
+}
+
+#header {
+    position: sticky;
+    top: 0px;
+}
+
+#navbar-bottom .cta-button {
+    background-color: rgb(197, 105, 18);
+    color: rgb(0, 0, 0);
+    padding: 24px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+#navbar-bottom2 {
+    background: linear-gradient(to bottom, rgb(253, 135, 24), rgb(212, 167, 16));
+    display: flex;
+    justify-content: center;
+}
+
+#navbar-bottom2 a {
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    padding: 24px 36px;
+    font-weight: bold;
+}
+
+#navbar-bottom2 h4 {
+    font-size: 18px;
+}
+
+#navbar-bottom i {
+    padding: 24px 8px;
+}
