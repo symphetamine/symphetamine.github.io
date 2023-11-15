@@ -1,0 +1,458 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+/*
+    Then we'll style the navbar with a simple
+    background gradient, and also transform
+    it into a flexbox, to make it easier
+    to work with in terms of alignment
+    and spacing.
+*/
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+    Finally, we'll target the anchors inside,
+    strip them of their default styling,
+    and give them some padding.
+*/
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+/*
+    And in terms of the image sizing, that's
+    pretty simple as well.  Just target the
+    image, and give it the width (or height)
+    that we think looks good.
+*/
+#navbar img {
+    width: 200px;
+}
+
+/*
+    That doesn't look too bad now, but some
+    designs call for having the logo on the 
+    far left, and the navigation links on 
+    the far right.
+
+    How can we make that happen?
+
+    There are a couple of different ways, 
+    but probably the simplest involves 
+    some margin auto magic again.
+
+    Previously, we told you that the auto
+    margin value can only be used with
+    block elements that have been given
+    an explicit width, and that's still true.
+
+    However, flexbox items are a little special.
+    Technically, they have been given an explicit
+    width; it's just that it was the flexbox that
+    set the width rather than you.
+
+    So, we can now do this neat trick where we
+    set margin-right: auto; on the logo, and 
+    it takes all the available space and shoves
+    it between the logo and the other links.
+*/
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+/*
+    Pretty nifty, right?  And also a very common
+    navbar style as well.
+
+    However, note that we applied margin-right to
+    the #logo anchor element, NOT the image.
+
+    If you apply margin-right: auto; to the image
+    nothing will happen.
+
+    That's because it is the anchor that is the 
+    flexbox item that is being resized by the 
+    flexbox.  The image is a child of the 
+    anchor, so it is just your regular old 
+    inline element, and thus is not eligible
+    for the margin auto magic.
+
+    One other thing: note that space-between
+    no longer seems to space out our navbar
+    links. 
+
+    That's because there is literally no 
+    space left to distribute; all the available
+    empty space was given to margin-right.
+    
+    So at the moment, justify-content really
+    isn't doing anything anymore.
+*/
+/*
+    Another very common style of navbar involves
+    having a call-to-action (CTA) button (or buttons)
+    at the far right of the navbar.
+
+    Why a button? Well, buttons tend to stand out 
+    more than hyperlinks, and also have more space 
+    to click on, which is good for a CTA.
+
+    Why to the far right? Remember that we read
+    left-to-right, and that we tend to assign
+    more importance to the first thing we see,
+    which is usually the logo or brand name.
+
+    Then you see the hyperlinks that allow
+    you to navigate the site, and then the last
+    thing you see is the CTA button(s).  
+    
+    It's not that the buttons are the least 
+    important (in fact, CTAs are usually very 
+    important to a site), but think of the CTA
+    position as more of a funnel at the end
+    of a flow.
+
+    Once you've perused the site navigation,
+    the last thing you see is something telling
+    to sign up, or create an account, or 
+    something like that.  It's hard to avoid,
+    and so, the last thing you see is in some
+    ways just as important as the first thing
+    you see, just in a different way.
+
+    Anyway, let's get our button in the HTML;
+    we're going to need to assign a new class
+    to the last anchor so that we can style 
+    it on its own.
+
+    Let's also change the content to be a 
+    more realistic CTA.
+
+    (Go do this in the HTML)
+
+    Now let's style a button here. We're 
+    going to want to adjust the padding
+    a bit compared to the other anchors,
+    and also add in some margin, in 
+    addition to font and color changes.
+*/
+
+#navbar .cta-button {
+    background-color: white;
+    color: green;
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+    height: 200vh;
+}
+
+/*
+    Notice how our navbar scrolls with the 
+    page? That's pretty normal div behavior,
+    so that shouldn't be surprising.
+
+    However, a lot of navbars actually stick
+    to the top of the page as you scroll,
+    so that you can always navigate elsewhere.
+
+    This comes with a trade-off though: that 
+    means you'll always be losing some vertical
+    space on the page to the navbar that could
+    be used to view page content.
+
+    For that reason, navbars that follow the
+    viewer down the page are only recommended
+    if you have a relatively short navbar.
+
+    Next, let's see some options for how we
+    can make our navbars "stick" to the top
+    of the page.
+*/
+/*
+    There are two main ways to get a navbar to
+    "stick" to the top of the page, and both
+    of them use the position property.
+
+    Depending on how adventurous you were in 
+    some previous assignments, some of you may have 
+    already encountered the position property.
+
+    The first way to have a navbar stick to the
+    top of the page is to use the value 'fixed'.
+    This is the older, more traditional way to
+    build a navbar, but it comes with some
+    gotchas that can trip you up, so we're not
+    going to demo it here.  Check out the Cookbook
+    if you're curious about this approach.
+
+    Instead, we're going to demo the second,
+    newer approach, which uses a value called
+    'sticky'.
+
+    (and yes, we're deliberately creating a new
+    CSS rule here; normally we'd want to keep
+    our CSS properties together in the same
+    CSS rules, but just trust that this will
+    simplify things later on in the demo)
+*/
+
+#navbar {
+    position: sticky;
+
+    /*
+        ...seems like nothing changed, and that's
+        an accurate assessment.
+
+        That's because the sticky value works
+        together with the side properties
+        (left, right, top, and bottom).
+
+        We specify the side of the page that we
+        want the element to stick to, and the
+        distance from that side we want it to
+        stick.
+
+        Normally for a navbar, we'd specify the
+        top side, and a value of 0px, since we
+        want it stuck to the very top, with no
+        space between it and the top of the page.
+    */
+    top: 0px;
+}
+
+/*
+    Now, what if we wanted to create a multi-level
+    navbar? That's actually not that difficult:
+    it really just comes down to adding another
+    navbar immediately beneath our existing one.
+
+    (Go into HTML and do that)
+
+    Now, let's style our new navbar.  Usually,
+    we want to style secondary (or even tertiary)
+    navbar with a different color scheme that
+    is either complementary or contrasting
+    with the original.
+*/
+
+#navbar-bottom {
+    background: linear-gradient(to bottom, yellowgreen, olive);
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+    We'll use a slightly different link style
+    for our second navbar, to make them a little
+    shorter compared to the first navbar.
+*/
+#navbar-bottom a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 36px;
+}
+/*
+    As you can see, our second navbar doesn't 
+    stick with the first one, and that makes
+    sense, because we only told the original
+    navbar to be sticky.
+
+    If we want to have both scrollbars be
+    sticky together, then the most appropriate
+    way to do that would be to create a new
+    container that groups both of them together,
+    and then make that container sticky.
+
+    (Go do that in the HTML)
+
+    Then we'll change our CSS rule that made
+    the first navbar sticky, and modify its
+    selector to point to the new #header
+    container element.
+*/
+
+#header {
+    position: sticky;
+    top: 0px;
+}
+
+/*
+    There you go! Now we have a sticky
+    header, that contains both of our navbars.
+*/
+
+#navbar-bottom {
+    background: linear-gradient(to bottom, yellowgreen, olive);
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar-bottom a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 36px;
+}
+/*
+    What if we want to add a footer? Well,
+    footer navbars are really not much different
+    from header navbars, aside from the face that
+    they're at the bottom of the page.
+
+    Let's go into our HTML and add a footer 
+    underneath our #layout div.
+
+    (Go into the HTML and do that)
+
+    Now we have some footer content. We're going
+    to style our footer navbar a bit differently
+    compared to the header navbars.
+
+    Notice how the header navbar content continues
+    to stretch and expand as the screen grows?
+
+    For some designs that may work, but generally,
+    for really wide screens, that's going to be 
+    a pain for a viewer to navigate. It's usually
+    better to have our content closer together.
+
+    So, for our footer navbars, we're going to 
+    show you how to do that.  Which actually
+    isn't anything new: we're just going to use
+    the same centered Single Column Layout
+    we used before, just inside of the footer.
+*/
+
+#footer {
+    background: linear-gradient(to bottom, teal, #01482e);
+    color: white;
+    padding: 12px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-navbar {
+    width: 800px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+/*
+    The last thing we'll do in this demo is show
+    how to build navbars with columns of links 
+    in them, like we've seen in some of the 
+    PowerPoint examples.
+
+    The setup is pretty straightforward; in our
+    HTML, we're going to add a new navbar inside
+    the footer, above our existing navbar.
+
+    Inside of that, we'll have a div for each
+    column, with a bunch of links inside.
+
+    (Go to the HTML and do that)
+
+    Now, this looks like a mess at first,
+    it will look much better once we add
+    styling to our new footer navbar.
+
+    In fact, it's not going to require anything
+    new.  How do we get content side by side?
+
+    (ask class)
+
+    Flexbox! Which is what we've been using
+    in all our navbars already.  It doesn't matter
+    if the content of a navbar are anchors or
+    entire divs; flexbox will put all of them
+    side by side.
+
+    And while we're at it, we'll use the same
+    centered Single Column layout as we used
+    in the first footer navbar too, along with
+    some padding to give more separation
+    between the two navbars.
+*/
+
+#footer-columns-navbar {
+    width: 800px;
+    margin: 0px auto;
+    padding: 48px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+    However, we do have a small problem with
+    the anchors; since anchors are inline
+    elements, they all run together in each
+    column.
+
+    So we have to do a little extra work to
+    fix that for each column.
+
+    There are two ways that we could address
+    this: either by changing the links into
+    block elements, or by changing the columns
+    into flexboxes with a column direction.
+
+    We'll opt for the second, just to show
+    you can have flexboxes in flexboxes.
+*/
+
+#footer-columns-navbar div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+    Lastly, our links are a tad too compact;
+    we're going to space them out a bit.
+*/
+#footer-columns-navbar a {
+    padding: 8px 0px;
+}
+
+/*
+    There we go: a fairly basic footer navbar
+    with columns inside.
+
+    Honestly, there's still a lot we could do
+    stylistically to clean things up a bit,
+    like balancing out the spacing more, and
+    adding clearer distinctions between the 
+    two navbars, perhaps with a border.
+
+    But we've covered enough for today, so
+    we'll leave our navbar demo here.
+
+    There are other examples in the Layouts 
+    section of the Coding Cookbook if you're
+    curious or want a refresher on what
+    we covered today.
+*/
