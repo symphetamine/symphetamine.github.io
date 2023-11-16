@@ -59,35 +59,122 @@ h2 {
     box-shadow: 
         inset 0px 0px 12px 12px #0d45ac66,
         12px 12px 8px #fc6bce66;
-    transform: translateY(-12px) rotate(360deg);
+    transform: rotate(180deg);
 }
 
 #hover-gallery-2 {
     display: flex;
     flex-wrap: wrap;
-    color: black;
+}
+
+#hover-gallery-2 .roll {
+    height: 600px;
 }
 
 #rick {
-    opacity:0.45;
-    -moz-opacity:0.45;
-    filter:alpha(opacity=45);
-    width: 950px;
-    background-attachment: fixed;
+    width: 1000px;
     background-image: url(../images/rick.gif);
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-#hover-gallery-2 .card {
+#rick1 {
+    width: 950px;
+    background-image: url(../images/rick1.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#rick2 {
+    width: 950px;
+    background-image: url(../images/rick2.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#rick3 {
+    width: 950px;
+    background-image: url(../images/rick3.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#hover-gallery-2 .roll {
+    flex: 300px;
+    background-color: rgb(58, 42, 56);
+    border: 4px solid rgb(58, 42, 56);
+    padding: 24px;
+    margin: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+        transform: 0.5s;
+}
+
+
+#hover-gallery-2:hover .roll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+#hover-gallery-3 {
+    position: relative;
+    border: 0px;
+    padding: 0px;
+}
+
+#hover-gallery-3 .card {
     flex: 200px;
-    background-color: lightcyan;
-    border: 4px solid pink;
-    padding: 12px;
-    margin: 12px 12px;
-    border-radius: 24px;
-    transition: 
-        background-color 1s,
-        box-shadow 1s,
-        transform 1s;
+    margin: 24px;
+    text-align: center;
+
+}
+
+#shrek {
+    position: relative;
+}
+
+#shrek .card-front,
+#shrek .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+#shrek .card-back {
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shrek .card-back p {
+    flex: 1;
+}
+
+#shrek .card-front {
+    background-image: url("../images/shrek.jpg");
+    background-size: cover;
+    border-radius: 12px;
+    width: 600px;
+    height: 100%;
+    background-position: center;
+    position: absolute;
+    transition: transform 0.25s 0.25s; 
+    padding: 200px 0px;
+}
+
+
+#shrek:hover .card-front {
+    transform: scaleX(0);
+    transition: transform 0.25s; 
+}
+
+#shrek:hover .card-back {
+    transform: scaleX(1);
+    transition: transform 0.25s 0.25s; 
 }
