@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#hover-gallery-1 {
+    display: flex;
+    flex-wrap: wrap;
+    color: aquamarine;
+}
+
+#hover-gallery-1 .card {
+    flex: 200px;
+    background-color: lightcyan;
+    border: 4px solid pink;
+    padding: 12px;
+    margin: 12px 12px;
+    border-radius: 24px;
+    transition: 
+        background-color 1s,
+        box-shadow 1s,
+        transform 1s;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;    
+}
+
+#axolotl {
+    background-image: url("../images/axolotl.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 500px;
+}
+
+#axolotl2 {
+    background-image: url("../images/axolotl2.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+#axolotl3 {
+    background-image: url("../images/axolotl3.png");
+    background-size: cover;
+    background-position: center center;
+}
+#axolotl1 {
+    background-image: url("../images/axolotl1.png");
+    background-size: cover;
+    background-position: center center;
+}
+#hover-gallery-1 .card:hover {
+    box-shadow: 
+        inset 0px 0px 12px 12px #0d45ac66,
+        12px 12px 8px #fc6bce66;
+    transform: translateY(-12px) rotate(360deg);
+}
+
+#hover-gallery-2 {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+}
+
+#rick {
+    opacity:0.45;
+    -moz-opacity:0.45;
+    filter:alpha(opacity=45);
+    width: 950px;
+    background-attachment: fixed;
+    background-image: url(../images/rick.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#hover-gallery-2 .card {
+    flex: 200px;
+    background-color: lightcyan;
+    border: 4px solid pink;
+    padding: 12px;
+    margin: 12px 12px;
+    border-radius: 24px;
+    transition: 
+        background-color 1s,
+        box-shadow 1s,
+        transform 1s;
+}

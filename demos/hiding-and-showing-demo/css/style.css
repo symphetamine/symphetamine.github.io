@@ -1,0 +1,607 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+    Then we'll style the cards container,
+    using flexbox and flex-wrap, as well
+    as align-items for something later on.
+*/
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/*
+    Then we'll style the cards.  We'll keep
+    them relatively simple, so we can focus
+    on the hover and transition effects later.
+*/
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/*
+    We'll also style the anchor into a simple
+    button, for use later in certain cards.
+*/
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+/*
+    That's it for our basic setup for the
+    demo.  Should give them a little more
+    practice with creating cards too.
+
+    Now we can focus on :hover and transitions.
+*/
+
+/*
+    First, we'll start out with a relatively
+    simple hover state for the first card.
+
+    They should have learned about the :hover 
+    pseudo-class last week, but doesn't 
+    hurt to review what it is and how it works.
+
+    Same with CSS Transitions.
+
+    For this example, we're just going to
+    add a background-color, and a combination
+    of box-shadow and a translate transform
+    to make it appear like the card is floating
+    off the page when we hover over it.
+*/
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+/*
+    That works, but the problem is that its
+    a very sudden state change; it's either
+    on or off.
+
+    To make it more gradual, we can register
+    those properties we changed in the hover
+    state with the transition property.
+
+    Remind the students that this should 
+    be applied to the card in its normal
+    state; we want it to ALWAYS transition,
+    whether we're hovering over it or not.
+*/
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+/*
+    Remember that in the transition property,
+    you must register each property name that
+    you want to animate between states, AND
+    you must include the duration that you 
+    want that animation to take.
+
+    That wraps up our first card; hopefully
+    that was a good refresher on how the
+    :hover pseudo-class and transition
+    property works.
+
+    Now, onto some more advanced :hover 
+    selectors that we can use.
+*/
+/*
+    Now we're going to work with #card2.
+
+    This time, we're going to work with
+    it when it's in its hover state...
+    but we're only going to target something
+    inside of it, not the whole thing.
+
+    In particular, we're going to target
+    the button, and give it a similar
+    treatment that we gave to #card1.
+
+    (we did things a little backwards
+    before by creating the CSS rule for 
+    the hover state, and then creating a 
+    CSS rule for the default state with 
+    the transition property.  We'll do 
+    things in a more logical order this
+    time, starting with the default state.)
+*/
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+/*
+    This is probably gonna throw students
+    for a loop, so take some time to explain
+    the selector above.
+
+    Remind them that whenver a selector is 
+    followed by a space, and then another 
+    selector, we're targeting the selector
+    on the right, when its inside of the
+    selector on the left.
+
+    That means that the code we wrote above
+    will ONLY target the button when the
+    card is in the hover state.
+
+    Could we have targetted the button with
+    the :hover state? Yes.
+
+    But then that state would only apply 
+    when we hover over the button, but
+    not when we hover over the card.
+
+    This is going to be an important
+    concept as we move into building
+    dropdown menus tomorrow, so we'll
+    get some more practice with it 
+    today in this demo.
+*/
+
+/*
+    Now we're going to work with #card3,
+    and this time, we're going to hide
+    the paragraph text and the button
+    when we hover over the card.
+
+    We're going to (start out) by using
+    the opacity property to hide the
+    content, but we're going to find
+    out that this approach isn't quite
+    ideal.
+*/
+#card3 .card-content {
+    transition:
+        opacity 0.5s;
+        visibility: 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*
+    By setting the opacity to zero on the
+    .card-content inside of the 
+    card's hover state, we make them
+    fade away.
+
+    However, notice what happens when you
+    hover over the space where the button
+    was...the mouse still turns into the
+    pointer cursor.
+
+    This means that although the button
+    is invisible, it's still there and
+    is actually interactable.
+
+    That's definitely less than ideal!
+    You don't want users to be able to
+    click on invisible buttons (unless
+    it's a website of some exploratory
+    game or art piece).
+*/
+/*
+    If we want content to fade in when
+    we hover over #card4, then we first 
+    need to make it hidden in its default
+    state.
+
+    That means we basically need to do the 
+    opposite of what we did for card3: 
+    
+    first we'll hide the content, and then
+    we'll make it appear when we hover 
+    over the card.
+*/
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+        transform: 0.5s;
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    /*
+        The opposite of the 'hidden' state
+        with the visibility property is
+        the 'visible' state.
+    */
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+/*
+    And there we go; now we have content
+    that appears when we hover over the 
+    card.
+
+    There's a bit more that we can do 
+    though, to make this a bit more
+    interesting...
+*/
+
+/*
+    With #card5, we're actually going to remove
+    it from the normal Document Flow of the card
+    by using position: absolute.
+
+    Recall from previous demos that when we use
+    position: absolute, the element will become
+    like a ghost: it can go anywhere it wants,
+    but the content around it acts like its 
+    not there.
+
+    However, also remember that when we use
+    absolute positioning, we also need to activate
+    RELATIVE positioning on the container of
+    whatever we're trying to absolutely position.
+
+    That means we need to set position: relative;
+    on the card itself, before we can absolutely
+    position the content inside of it.
+*/
+
+#card5 {
+    position: relative;
+}
+
+
+
+  
+/*
+    See how the card itself shrunk as if the
+    .card-content wasn't there, and the 
+    .card-content is now sort of floating above
+    the card?
+
+    That's the effect of absolute positioning.
+
+    It usually is pretty ugly on its own, which
+    is why we'll need to add some additional
+    styling to make it look better
+*/
+/*
+    Side note: I highly recommend building
+    hidden content the way we did here: 
+        - styling it in its visible state first, 
+        - then once you get it the way you want, 
+            only then writing the code to hide it
+    
+    It'll be much simpler to test compared to
+    hiding it first, and then having to keep hovering
+    over it to check your styling changes.
+
+    Anyway, now that we have things in a passable
+    state, next we'll hide the card with opacity
+    and visibility like before, in addition
+    to registering the properties we want
+    to animate.
+*/
+#card5 .card-content {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    left: 0px;
+    margin: 0px 24px;
+    padding: 24px;
+    
+    /* new properties */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s;
+
+}
+
+/*
+    Now we add in the hover state styling, 
+    to make it appear again when we hover over it.
+*/
+#card5:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+/*
+    At this point, our card is less of a card
+    and more of a popup trigger.
+
+    Which is a perfect segue to what we'll be
+    working on tomorrow: building dropdown 
+    menus.
+
+    Imagine having something like #card5 
+    inside one of the navbars from yesterday;
+    that's essentially how we're going to be
+    building dropdown menus.
+*/
+
+/*
+    Now we're going to add those properties
+    we just stripped from the container onto
+    the card faces.
+*/
+#card6 .card-front,
+#card6 .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/*
+    Things should look almost the same as before,
+    except for an empty card border above our 
+    main content; that's where we're going to
+    put a background image for the front face.
+
+    We're going to simulate our card flip by 
+    using the transform property, and using
+    scaleX to shrink one card face horizontally
+    until it's not even a pixel wide, and then
+    we'll grow the other one.
+
+    Now that our back card is basically ready
+    to go, we'll shrink it down to its "back"
+    state with scaleX(0)
+*/
+
+#card6 .card-back {
+    transform: scaleX(0);
+}
+
+/*
+    Now we just have that empty card for our front
+    face left behind; we're going to use an image
+    to fill that, so take a bit of time to grab an 
+    image you like, and then we'll come back here and
+    add some properties to front face of the card.
+
+    (five minutes or so later)
+
+    Now that we all have an image, we want this 
+    image to fill up all the space of the card
+    container (same as the back face), while
+    also getting that ghost behavior of position:
+    absolute.
+
+    We'll do that with the properties below.
+*/
+#card6 .card-front {
+    background-image: url("../images/perrito.jpg");
+    background-size: cover;
+    border-radius: 12px;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+}
+
+/* 
+    Now we pretty much have things set up, ready
+    to go for the animation.
+    
+    And this is where things get a little weird...
+*/
+/* 
+    We basically want to animate the transform
+    property for the front and back faces:
+    the front face should shrink to nothing,
+    and the back face should grow to its 
+    normal size.
+
+    However, if we do both at the same time...
+    it's not going to look like a flip effect 
+    at all
+*/
+
+#card6 .card-front {
+    transition: transform 0.25s;
+}
+
+#card6 .card-back {
+    transition: transform 0.25s;
+}
+
+#card6:hover .card-front {
+    transform: scaleX(0);
+}
+
+#card6:hover .card-back {
+    transform: scaleX(1);
+}
+
+/*
+    It's an interesting effect, but not
+    quite the one we're looking for.
+*/
+/*
+    Think about what normally happens if you
+    flip a playing card around: we should see
+    the front face shrinking first, and then
+    once the front face is gone and we're looking
+    at the paper-thin edge of the card, only then
+    do we see the back face growing.
+
+    That's the behavior we need to mimick if we
+    want to simulate a card flip.
+
+    To make that happen, we need to introduce
+    a delay to the animation of the back face.
+*/
+
+#card6 .card-front {
+    transition: transform 0.25s;
+}
+
+#card6 .card-back {
+    /*
+        We can add a delay to a transition
+        by adding another time value after
+        the first; the first time value is 
+        the duration of the animation, and
+        the second is the delay
+    */
+    transition: transform 0.25s 0.25s; /* updated */
+}
+
+#card6:hover .card-front {
+    transform: scaleX(0);
+}
+
+#card6:hover .card-back {
+    transform: scaleX(1);
+}
+
+/*
+    Much better! Although we're using
+    scaling to approximate the behavior of
+    a rotating card, it's actually not a
+    bad simulation.
+
+    ...at least, until you move the mouse
+    off of the card.
+
+    The reverse transformation unfortunately
+    doesn't work the way we want, because
+    the delay isn't inverted when we go
+    back to the default state.
+*/
+#card6 {
+    position: relative;
+    border: 0px;
+    padding: 0px;
+}
+
+#card6 .card-front,
+#card6 .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+#card6 .card-back {
+    transform: scaleX(0);
+}
+
+#card6 .card-front {
+    background-image: url("../images/perrito.jpg");
+    background-size: cover;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/*
+    The way to address this issue is by changing
+    the transitions depending on the state of the
+    card.
+
+    If we're hovering over it, we want the delay
+    to be on the animation of the back face of 
+    the card.
+
+    If we're moving our mouse off of it, then we
+    want the delay on the animation of the front 
+    face of the case (which is essentially the 
+    new back face).
+
+    Although that's a little confusing, we can 
+    actually make that happen!
+
+    We just need to move our current transition
+    properties to the hover states of the faces,
+    and then reverse them on the default state
+    of the faces.
+*/
+
+#card6 .card-front {
+    /* previous code */
+    /* transition: transform 0.25s; */
+
+    /* new code */
+    transition: transform 0.25s 0.25s; 
+}
+
+#card6 .card-back {
+    /* previous code */
+    /* transition: transform 0.25s 0.25s;  */
+
+    /* new code */
+    transition: transform 0.25s;
+}
+
+#card6:hover .card-front {
+    transform: scaleX(0);
+    transition: transform 0.25s; /* new */
+}
+
+#card6:hover .card-back {
+    transform: scaleX(1);
+    transition: transform 0.25s 0.25s; /* new */
+}
+
+/*
+    Success! And while the logic behind it
+    can be a bit confusing, it didn't take
+    that much code to write, at least not
+    once we had our HTML set up properly.
+
+    This card flipping effect is a FANTASTIC
+    thing to consider using in a portfolio
+    gallery, especially if you want to 
+    include captions or links to your images,
+    but you don't want them to just sit
+    below your image. Put them on the "back" 
+    of the image instead!
+
+    That wraps things up for this demo!
+*/
