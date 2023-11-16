@@ -179,3 +179,144 @@ h2 {
     transform: scaleX(1);
     transition: transform 0.25s 0.25s; 
 }
+
+#donkey {
+    position: relative;
+    width: 600px;
+    height: 300px;
+}
+
+#donkey .card-front,
+#donkey .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+#donkey .card-back {
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#donkey .card-back p {
+    flex: 1;
+}
+
+#donkey .card-front {
+    background-image: url("../images/donkey.jpg");
+    background-size: cover;
+    border-radius: 12px;
+    background-position: center;
+    position: absolute;
+    transition: transform 0.25s 0.25s; 
+}
+
+
+#donkey:hover .card-front {
+    transform: scaleX(0);
+    transition: transform 0.25s; 
+}
+
+#donkey:hover .card-back {
+    transform: scaleX(1);
+    transition: transform 0.25s 0.25s; 
+}
+
+#fiona {
+    position: relative;
+    width: 600px;
+    height: 300px;
+}
+
+#fiona .card-front,
+#fiona .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+#fiona .card-back {
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fiona .card-back p {
+    flex: 1;
+}
+
+#fiona .card-front {
+    background-image: url("../images/fiona.jpg");
+    background-size: cover;
+    border-radius: 12px;
+    background-position: center;
+    position: absolute;
+    transition: transform 0.25s 0.25s; 
+}
+
+
+#fiona:hover .card-front {
+    transform: scaleX(0);
+    transition: transform 0.25s; 
+}
+
+#fiona:hover .card-back {
+    transform: scaleX(1);
+    transition: transform 0.25s 0.25s; 
+}
+
+#dragon {
+    position: relative;
+    width: 600px;
+    height: 300px;
+}
+
+#dragon .card-front,
+#dragon .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+#dragon .card-back {
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dragon .card-back p {
+    flex: 1;
+}
+
+#dragon .card-front {
+    background-image: url("../images/dragon.jpg");
+    background-size: cover;
+    border-radius: 12px;
+    background-position: center;
+    position: absolute;
+    transition: transform 0.25s 0.25s; 
+}
+
+
+#dragon:hover .card-front {
+    transform: scaleX(0);
+    transition: transform 0.25s; 
+}
+
+#dragon:hover .card-back {
+    transform: scaleX(1);
+    transition: transform 0.25s 0.25s; 
+}
