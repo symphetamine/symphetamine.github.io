@@ -1,0 +1,398 @@
+/*
+    Then we'll add some simple styling,
+    similar to one of the navbars we created on 
+    Day 1.
+    
+    In particular, we'll build a navbar
+    with a logo/brand name on the left, and the
+    remaining nav items on the right.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+}
+/*
+    Next, let's do a bit more with our
+    nav items' hover states.
+
+    (it'll come in handy later on to know
+    exactly which part of the nav items
+    are hover-able)
+
+    We'll flip the gradient background we
+    used in the navbar, to make it seem like
+    the background is inverted when we hover
+    over the nav items, even though 
+    technically its a new background on top.
+*/
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+
+/*
+    Hmm...we can see that for our nav items
+    on the right, the background doesn't fill
+    the entire navbar when we hover over them.
+
+    That's less than ideal, and not quite the
+    effect we were looking for (and will 
+    complicate things once we build the
+    dropdowns).
+
+    This happens because the logo is actually 
+    taller than the nav items, and stretches 
+    out the navbar vertically because it has 
+    the same padding as the other nav items.
+
+    So, we'll need to adjust the padding on 
+    the logo, but just on the top and bottom.
+*/
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    /*
+        We have to be a little nitpicky about
+        the exact values here.
+    */
+    padding-top: 13px; /* new */
+    padding-bottom: 12px; /* new */
+}
+
+/*
+    There we go! Now when we hover over our
+    nav items, including the logo, the background
+    appears to invert.
+
+    To be clear, we don't HAVE to use an effect 
+    like this in a navbar; it's just one of many 
+    options for hover effects that we chose to 
+    use for the demo today (and one that will be 
+    handy when building out dropdowns).
+*/
+
+/*
+    Remember that our preferred approach for
+    building content that is meant to be hidden
+    is to build it in its visible state first.
+
+    So, we need to think about how we want this
+    content to be positioned and styled before
+    we make it invisible.
+
+    First off, we definitely don't want the
+    dropdown menu content in the navbar itself.
+
+    So, we can use position: absolute; to remove
+    it from the normal flow.  But remember, there's
+    something we always need to do before we can
+    use position: absolute (correctly).
+
+    Anyone remember? (pause for students to answer)
+
+    We need to use position: relative; on the 
+    container of whatever we want to position
+    absolutely.
+
+    In our case, that would be the dropdown-container.
+*/
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+}
+
+/*
+    Looking better already! ...well, actually
+    the dropdown menu seems to have disappeared
+    entirely, at least until you hover over it
+    underneath the gallery section.
+
+    See, we never actually gave a background to
+    the hyperlinks in the dropdown menu, so 
+    they're just white text against a white
+    background.
+
+    But they're still there! Let's make them
+    more visible in our next step.
+*/
+
+/*
+    Let's give the links in the dropdown menu
+    a background to start with.  
+
+    The linear gradient won't work as well, since
+    the dropdown links are vertical rather than
+    horizontal, so we'll just give them a solid
+    background color that complements the navbar.
+
+    Notice that we're only targeting hyperlinks
+    in the dropdown MENU, not the CONTAINER.
+
+    The original Gallery link is in the container,
+    and we don't want to change the style of that
+    link; only the ones in the menu itself.
+*/
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    /*
+        You'll also notice that now we have a jagged
+        edge, as all the links have different widths.
+
+        We can fix that by applying width: 100%;
+    */
+    width: 100%;
+    /*
+        But even that looks a tad awkward with our
+        current design, because its so narrow.
+        We can force it to stretch out a bit more
+        by applying a min-width to it.
+    */
+    min-width: 200px;
+}
+
+/*
+    Finally, let's change the hover state; the 
+    gradient background doesn't fit very well
+    in the dropdown menu, so we'll give it
+    another complementary solid color instead.
+
+    However, note that simply using the selectors:
+
+    .dropdown-menu a:hover { }
+
+    won't work. (write the code to show this)  
+    
+    Why doesn't it work?
+
+    Because higher up in our code, we also specified
+    the selectors:
+
+    #navbar a:hover { }
+
+    Both apply and target the anchor tags in the
+    dropdown menu; however, ID Selectors are 
+    more specific than Class Selectors, and 
+    are given higher priority in CSS.
+    
+    So when selectors "collide" as it were,
+    like they do here, the more specific selectors
+    (the ones with higher priority) are the ones
+    that get their styles applied.
+
+    (you can open this up in the Chrome Developer
+    Tools and show them by selecting the dropdown
+    anchor and toggling on its :hover state)
+
+    So, we need to make our selectors even MORE
+    specific in order to override the general
+    style we specified earlier.
+
+    We can do that by sort of combining the
+    two selectors together.
+*/
+#navbar .dropdown-menu a:hover {
+    /*
+        Also note that we can't just use
+        background-color here, because we used
+        background with linear-gradient for the
+        other hover state.
+
+        So we have to use the same property
+        (the background shorthand) in order to
+        override the other hover style.
+    */
+    background: slateblue;
+}
+
+/*
+    With that, we pretty much have our dropdown
+    menu appearing as we'd like it to when it
+    actually is visible.
+
+    Now we need to add the code to conceal it 
+    until we hover over the trigger item.
+*/
+
+/*
+    (might be worth asking students which
+    element/class it is that we want to hide)
+
+    The element that we need to hide is the 
+    div with the .dropdown-menu class.
+
+    We covered a couple different ways in the
+    showing/hiding content demo.
+
+    (ask if they remember the properties/values
+    we can use to hide something)
+
+    display: none; is an option, but the 
+    problem with that one is that it's not
+    transition-able or animate-able, and in
+    general, our web page will feel a lot
+    more professional if we can implement
+    transitions.
+
+    So instead, we will use the opacity and
+    visibility properties to hide it, in 
+    addition to registering those properties
+    for transitioning.
+*/
+
+.dropdown-menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.25s,
+        visibility 0.25s;
+}
+
+/*
+    Now our menu is gone! But we need to
+    get it back! How?
+
+    We need to target the menu ONLY
+    when the dropdown-container is in its
+    hover state.
+*/
+.dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*
+    There we go! That basically does it:
+    we now have a dropdown menu!
+
+    But why stop at one dropdown menu?
+
+    With the way we coded the HTML/CSS,
+    we should be able to add additional
+    dropdowns as long as we use the 
+    proper HTML structure and CSS classes.
+*/
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    width: 100%;
+    min-width: 200px;
+}
+
+#navbar .dropdown-menu a:hover {
+    background: slateblue;
+}
+
+/*
+    Our issue with our "More" dropdown 
+    has to do with the positioning of the
+    .dropdown-menu element.
+
+    But we don't want to change the styles
+    for all of our dropdowns, since it's 
+    only the one on the far right that is
+    the problem.
+*/
+.dropdown-menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.25s,
+        visibility 0.25s;
+}
+
+/*
+    So instead, we're going to create a
+    new CSS rule for the .dropdown-menu,
+    that uses a new pseudo-class called
+    :last-child.
+
+    Essentially, we're going to write a
+    selector that says: "if the dropdown
+    menu is in the last dropdown container
+    (in the navbar), change the positioning
+    of the dropdown menu"
+*/
+.dropdown-container:last-child .dropdown-menu {
+    /*
+        Since all dropdown menus are positioned
+        absolutely (due to our code above),
+        we can reposition this dropdown-menu
+        using one of the side properties.
+
+        In this case, we're going to anchor the
+        dropdown menu to the right of the 
+        dropdown container, so that it's always
+        completely in view, and won't overflow.
+    */
+    right: 0px;
+}
+
+/*
+    And there we go! We should now have dropdown
+    menus that work in almost any context.
+
+    ...ALMOST any context.  
+
+    Because as some of you may have already 
+    discovered, our dropdown menus (and the 
+    navbar itself) doesn't look too great
+    if we shrink the screen down.
+
+    We need a way to code our navbars so that
+    they work on wider screens, but also
+    on narrow screens, like on phones...
+
+    ...but that's a topic for tomorrow! We're 
+    just bringing it up here so you can think
+    a bit about the issue.
+
+    We just have one last bit to add to our
+    dropdown menus for this demo today: icons!
+*/
+
+.dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    width: 100%;
+    min-width: 200px;
+}
+
+#navbar .dropdown-menu a:hover {
+    background: slateblue;
+}

@@ -1,0 +1,119 @@
+* {
+    box-sizing:border-box;
+}
+body {
+    margin:0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#navbar {
+    display:flex;
+    align-items:center;
+    background-color:rgb(52, 245, 203);
+    border-bottom:2px solid rgb(1, 88, 81);
+    font-size: 40px;
+}
+#navbar a {
+    display:inline-block;
+    padding:24px;
+    color:rgb(73, 82, 0);
+    text-decoration:none;
+    transition:
+        background-color .1.5s
+    ;
+}
+#navbar #logo {
+    margin-right:auto;
+    font-weight:bold;
+    font-size:50px;
+}
+
+#navbar a:hover {
+    background-color:rgb(36, 143, 214);
+}
+#navbar #logo:hover {
+    background-color:transparent;
+}
+
+
+
+#hero {
+    background-image:url(../images/dogs.jpg);
+    height:100vw;
+    background-size:cover;
+    background-position:center center;
+    font-size:150px;
+    color:rgb(1, 88, 81);
+    padding:45px;
+}
+
+
+.drop-down-container {
+    position:relative;
+}
+.drop-down {
+    position:absolute;
+    border:2px solid rgb(1, 88, 81);
+    background-color:rgb(0, 206, 127);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-20px);
+    transition:
+        opacity .5s,
+        visibility .5s,
+        transform .5s
+    ;
+}
+.drop-down-container:hover .drop-down {
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0px);
+}
+.drop-down a {
+    width:100%;
+    min-width:100px;
+}
+
+.single-column {
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.desc-box {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:rgb(154, 135, 222);
+    border-radius:100px;
+    max-width:800px;
+    box-shadow:4px 4px 8px rgba(0, 0, 0, 0.514);
+}
+.desc-box h1 {
+    font-size:36px;
+}
+.desc-box img {
+    height:80vh;
+}
+.desc-box p {
+    padding:12px 48px;
+    font-size:20px;
+}
+.desc-box a {
+    font-weight:bold;
+    text-decoration:none;
+    font-size:36px;
+    color:rgb(0, 0, 0);
+    background-color:rgb(212, 221, 89);
+    padding:40px;
+    border-radius:100px;
+    margin:12px;
+    display:block;
+    transition:
+        transform .3s,
+        box-shadow .3s
+    ;
+}
+.desc-box a:hover {
+    transform:translateY(-5px);
+    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.658);
+}
