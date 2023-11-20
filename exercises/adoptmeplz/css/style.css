@@ -4,6 +4,8 @@
 body {
     margin:0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(../images/paws.jpg);
+    background-size: cover;
 }
 #navbar {
     display:flex;
@@ -89,7 +91,9 @@ body {
     box-shadow:4px 4px 8px rgba(0, 0, 0, 0.514);
 }
 .desc-box h1 {
-    font-size:36px;
+    font-size:45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
 }
 .desc-box img {
     height:80vh;
@@ -115,5 +119,5 @@ body {
 }
 .desc-box a:hover {
     transform:translateY(-5px);
-    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.658);
+    box-shadow:4px 4px 8px rgba(0, 0, 0, 0.658);
 }
