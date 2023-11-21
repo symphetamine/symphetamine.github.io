@@ -9,54 +9,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-img {
-    width: 100%;
-}
-.contain {
-    width: 90vw;
-    max-width: 1200px;
-    margin: 0px auto;
-}
-
-.frame {
-    width: 350px;
-    border: 10px solid rgb(235, 148, 235);
-    display: inline-block;
-    vertical-align: top;
-}
-.frame img {
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.title h1 {
-    border-bottom: 2px solid rg;
-    padding-bottom: 0.2rem;
-    font-size: 2rem;
-    color: rgb(97, 1, 97)
-}
-.title ul{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 1rem 0px 2rem;
-}
-.content p {
-    margin-bottom: 1rem;
-    font-size: 15px;
-}
-
-#abt {
-    grid-template-columns: 1fr 450px 250px 1fr;
-}
-
-.title {
-    display: inline-block;
-    width: 400px;
-}
-
-
 
 #navbar {
     background: linear-gradient(to bottom, rgb(34, 0, 128), #433e6d);
