@@ -89,3 +89,9 @@ img {
     text-align: center;
     margin-right: 24px;
 }
+
+@media screen and (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+    }
+}
