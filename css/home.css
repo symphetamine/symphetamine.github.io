@@ -20,7 +20,9 @@ body {
     text-decoration: none;
     color: white;
     padding: 24px;
-}
+    display:flex;
+    flex-direction: column;
+    }
 
 #navbar #logo {
     margin-right: auto;
