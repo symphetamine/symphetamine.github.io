@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Taviraj:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: "Taviraj";
+}
+
+#navbar {
+    background: rgb(80, 116, 155);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+#navbar #logo img {
+    width: 200px;
+}
+
+#navbar .cta-button {
+    background-color: white;
+    border-radius: 36px;
+    padding: 10px 24px;
+    font-size: 10px;
+    font-weight: bold;
+    min-width: 200px;
+    text-align: right;
+    margin-right: 24px;
+}
+
+.spacer {
+    height: 100vh;
+}
+
+#hero {
+    background-image: url("../images/elvis.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .hero-content {
+    text-align: center;
+    color: white;
+    padding-top: 20vh;
+}
+
+#hero h2 {
+    font-size: 4.5vw;
+    margin-bottom: 8vh;
+    font-family: 'Oswald', sans-serif;
+}
+
+#hero h4 {
+    font-size: 3vw;
+    margin: 0px;
+}
+
+#hero a {
+    font-size: 3.5vw;
+    display: inline-block;
+    background-color: white;
+    color: #000000;
+    text-decoration: none;
+    padding: 24px;
+    margin: 5vh 2vw 10vh;
+}
+
+#footer {
+    background: #D4BC9C;
+    color: white;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#footer-logo {
+    width: 200px;
+}
+
+#footer-logo img {
+    width: 100%;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-navbar {
+    width: 600px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer-columns-navbar {
+    width: 500px;
+    margin: 0px auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-columns-navbar a {
+    display: block;
+    padding: 8px;
+}
+
+#layout {
+    width: 200px;
+    margin: 48px auto;
+    font-size: 24px;
+}
