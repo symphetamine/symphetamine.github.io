@@ -154,3 +154,34 @@ body {
         background-position: center right -100px;
     }
 }
+
+.two-columns {
+    display: flex;
+    height: 100vh;
+}
+
+.big-text-column,
+.img-column {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-text-column {
+    background-color: #38d68a;
+    color: #6283a8;
+    font-size: 28px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.column-content {
+    margin: 48px;
+    text-align: center;
+}
+
+.img-column img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
