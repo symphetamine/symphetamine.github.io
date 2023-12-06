@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins&family=Taviraj:wght@100&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 body {
-    font-family: sans-serif;
-    background-color: rgb(46, 137, 173);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'poppins';
+    background-image: url(../images/contact.jpg);
+    background-size: cover;
     font-size: 15px;
 }
 
 #navbar {
-    background: linear-gradient(to bottom, rgb(34, 0, 128), #433e6d);
+    background: linear-gradient(to bottom, rgb(0, 92, 128), #7197c4);
     display: flex;
     align-items: center;
 }
@@ -30,20 +32,83 @@ body {
     width: 150px;
 }
 
-#navbar .cta-buttom {
-    background-color: white;
-    color: rgb(235, 148, 235);
-    border-radius: 36px;
-    padding: 16px 24px;
-    font-size: 20px;
-    font-weight: bold;
-    min-width: 150px;
-    text-align: center;
-    margin-right: 24px;
-}
 
 @media screen and (max-width: 768px) {
     #navbar {
         flex-direction: column;
     }
+}
+
+#layout {
+    width: 500px;
+    margin: 0px auto;
+}
+
+#layout h1 {
+    color: antiquewhite;
+
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 50px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+form {
+    background-color: white;
+    padding: 36px;
+    border: 2px solid #CCCCCC;
+    border-radius: 2px;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+input,
+select,
+textarea {
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #75bff0;
+    margin-bottom: 16px;
+}
+
+textarea {
+    font-family: sans-serif;
+}
+
+input[type=submit] {
+    width: auto;
+    background-color: #0e6de1;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    min-width: 75px;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    background-color: lightcoral;
+    border: 2px solid red;
+}
+
+input:focus {
+    outline: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
 }
