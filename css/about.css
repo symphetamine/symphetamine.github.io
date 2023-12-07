@@ -88,17 +88,6 @@ img {
     width: 150px;
 }
 
-#navbar .cta-buttom {
-    background-color: white;
-    color: rgb(235, 148, 235);
-    border-radius: 36px;
-    padding: 16px 24px;
-    font-size: 20px;
-    font-weight: bold;
-    min-width: 150px;
-    text-align: center;
-    margin-right: 24px;
-}
 
 @media screen and (max-width: 768px) {
     #navbar {
