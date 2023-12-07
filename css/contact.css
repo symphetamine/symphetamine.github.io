@@ -49,6 +49,10 @@ body {
 
 }
 
+#layout h2 {
+    color: antiquewhite;
+}
+
 header,
 footer {
     text-align: center;
