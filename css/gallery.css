@@ -8,12 +8,12 @@
 }
 body {
     font-family: 'poppins';
-    background-color: rgb(46, 137, 173);
+    background-image: url(../images/texture.jpg);
     font-size: 15px;
 }
 
 #navbar {
-    background: linear-gradient(to bottom, rgb(34, 0, 128), #433e6d);
+    background: linear-gradient(to bottom, rgb(0, 92, 128), #7197c4);
     display: flex;
     align-items: center;
 }
@@ -54,4 +54,14 @@ body {
     max-width: 800px;
     margin: 48px auto;
     text-align: center;
+}
+
+.portfolio-gallery {
+    columns: 3 auto;
+    column-gap: 24px;
+}
+
+.portfolio-gallery img {
+    width: 100%;
+    margin-bottom: 24px;
 }
