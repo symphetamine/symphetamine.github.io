@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins&family=Taviraj:wght@100&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 body {
-    font-family: sans-serif;
+    font-family: 'poppins';
     background-color: rgb(46, 137, 173);
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
 
@@ -46,4 +48,10 @@ body {
     #navbar {
         flex-direction: column;
     }
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
 }
