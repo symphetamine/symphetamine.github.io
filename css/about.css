@@ -37,7 +37,7 @@ img {
     margin-top: 4vh;
     padding-bottom: 0.2rem;
     font-size: 4rem;
-    color: rgb(255, 255, 255)
+    color: rgba(245, 59, 59, 0.808);
 }
 .title ul{
     list-style-type: none;
